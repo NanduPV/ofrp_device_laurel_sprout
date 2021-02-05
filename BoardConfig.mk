@@ -57,7 +57,7 @@ BOARD_KERNEL_CMDLINE += skip_override androidboot.fastboot=1
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
-TARGET_PREBUILT_KERNEL := device/xiaomi/laurel_sprout/prebuilt/zImage
+TARGET_PREBUILT_KERNEL := device/xiaomi/laurel_sprout/prebuilt/Image.gz-dtb
 BOARD_PREBUILT_DTBOIMAGE := device/xiaomi/laurel_sprout/prebuilt/dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -128,8 +128,10 @@ TW_HAS_EDL_MODE := true
 USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/xiaomi/laurel_sprout/installer
 TW_INCLUDE_REPACKTOOLS := true
-TW_USE_TOOLBOX := true
 
 # Encryption
-PLATFORM_SECURITY_PATCH := 2025-12-31
+PLATFORM_SECURITY_PATCH := 2020-11-05
 PLATFORM_VERSION := 16.1.0
+
+#Use LZMA Compression
+LZMA_RAMDISK_TARGETS := recovery
